@@ -1,6 +1,7 @@
 let homeScore = 0
 let awayScore = 0
 let currentPeriod = 0
+let gameRunning = false
 
 let elHome = document.getElementById("total-home-score")
 let elAway = document.getElementById("total-away-score")
@@ -72,15 +73,25 @@ function startTimer(duration, display) {
 
         display.textContent = minutes + ":" + seconds;
 
+        if (!gameRunning) {
+            clearInterval(tIntt)
+            display.textContent = "88:88"
+            gameRunning = false
+        }
+
         if (--timer < 0) {
             clearInterval(tIntt)
             display.textContent = "88:88"
+            gameRunning = false
         }
     }, 1000);
 }
 
 function startGame() {
-    let twelveMinutes = 60 * 1
-    display = document.getElementById("central-timer")
-    startTimer(twelveMinutes, display)
+    if (!gameRunning) {
+        let twelveMinutes = 60 * 1
+        display = document.getElementById("central-timer")
+        startTimer(twelveMinutes, display)
+        gameRunning = true
+    }
 }
