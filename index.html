@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Basketball Score Keeper</title>
+</head>
+<body>
+    <div id="primary-container">
+        
+        <div id="inner-container">
+
+                <div id="home-button-container">
+                    <div class="score-buttons home-buttons">
+                        <button class="button-control" onclick="addHomeThree()">+3</button>
+                        <button class="button-control" onclick="addHomeTwo()">+2</button>
+                        <button class="button-control" onclick="addHomeOne()">+1</button>
+                        <button class="button-control" onclick="removeOneHome()">-</button>
+                    </div>
+                </div>
+
+                <div id="central-container">
+                    
+                    <div id="widget-timer">
+                        <label class="central-timer" id="central-timer">
+                            88:88
+                        </label>
+                    </div>
+
+                    <div id="widget-scores">
+                        
+                        <div id="home-score">
+                            <label class="home-score" id="total-home-score">0000</label>
+                        </div>
+                        <div id="inner-controls">
+                            <button class="central-button" onclick="resetGame()">Reset</button>
+                            <button class="central-button" onclick="startGame()">Start</button>
+                        </div>
+                        <div id="away-score">
+                            <label class="away-score" id="total-away-score">0000</label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div id="away-button-container">
+                    <div class="score-buttons away-buttons">
+                        <button class="button-control" onclick="addAwayThree()">+3</button>
+                        <button class="button-control" onclick="addAwayTwo()">+2</button>
+                        <button class="button-control" onclick="addAwayOne()">+1</button>
+                        <button class="button-control" onclick="removeOneAway()">-</button>
+                    </div>
+                </div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
